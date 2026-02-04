@@ -63,22 +63,36 @@ export default function Home() {
             "https://images.unsplash.com/photo-1468436139062-f60a71c5c892?w=300&h=300&fit=crop",
             "https://images.unsplash.com/photo-1513581166391-887a96ddeafd?w=300&h=300&fit=crop",
             "https://images.unsplash.com/photo-1585211969224-3e992986159d?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1549144511-f099e773c147?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=300&h=300&fit=crop",
+            "https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=300&h=300&fit=crop",
           ];
           const randomImage = randomImages[Math.floor(Math.random() * randomImages.length)];
 
           return (
             <motion.div
               key={image.id}
-              initial={{ opacity: 0, scale: 0, rotate: 0 }}
+              initial={{ opacity: 0, scale: 0.8, rotate: 0 }}
               animate={{ 
                 opacity: 1, 
                 scale: 1, 
-                rotate: Math.random() * 40 - 20 
+                rotate: Math.random() * 10 - 5 
               }}
               exit={{ 
                 opacity: 0, 
-                scale: 0.5,
-                transition: { duration: 0.5 }
+                scale: 0.8,
+                transition: { duration: 0.3 }
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 200,
+                damping: 20
               }}
               style={{
                 position: "absolute",
